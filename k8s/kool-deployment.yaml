@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: kool
-        image: tapashranjannandi/kool:48
+        image: tapashranjannandi/kool:49
         ports:
         - containerPort: 80
