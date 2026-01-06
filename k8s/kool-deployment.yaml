@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kool-deployment
+  labels:
+    app: kool-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: kool-app
+  template:
+    metadata:
+      labels:
+        app: kool-app
+    spec:
+      containers:
+      - name: kool
+        image: tapashranjannandi/kool:deployment_version
+        ports:
+        - containerPort: 80
