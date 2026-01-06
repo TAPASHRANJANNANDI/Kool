@@ -36,7 +36,7 @@ pipeline {
             git config user.email "tapash@gmail.com"
             git config user.name "Tapash"
 
-            git add k8s/deployment.yaml
+            git add k8s/kool-deployment.yaml
             git commit -m "Update image tag to ${BUILD_NUMBER}" || echo "No changes to commit"
             git push https://${GITHUB_TOKEN}@github.com/TAPASHRANJANNANDI/Kool.git master
           '''
