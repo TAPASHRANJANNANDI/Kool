@@ -31,7 +31,7 @@ pipeline {
             echo "Workspace content:"
             ls -R
 
-            sed -i "s/deployment_version/${BUILD_NUMBER}/g" k8s/kool-deployment.yaml
+            sed -i "s|image: tapashranjannandi/kool:.*|image: tapashranjannandi/kool:${BUILD_NUMBER}|" k8s/kool-deployment.yaml
 
             git config user.email "tapash@gmail.com"
             git config user.name "Tapash"
